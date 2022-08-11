@@ -1,5 +1,5 @@
+s = ... # input
 # Part 1
-s = ...
 print((_:=s.count)('(')-_(')'))
 # Part 2
 print([i-2*s[:i].count(')')for i in range(len(s))].index(-1))
