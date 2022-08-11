@@ -16,7 +16,7 @@ f=s:gmatch"."
 for c in f do
     x=x+(1|-(c==')'and 1 or 0))
     if i then
-        if x == 0 then
+        if x==0 then
             print(i)
             i=false
         else i=i+1 end
