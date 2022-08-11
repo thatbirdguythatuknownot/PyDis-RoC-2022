@@ -1,0 +1,7 @@
+s="" /; input
+/; Part 1
+print((_=s.count)('(')-_(')'))
+/; Part 2
+print(#acc(|c|1|-(c==')'),s).til((-1).__eq))
+/; Both parts
+print(acc(|c|1|-(c==')'),s).andif((-1).__eq,|s,_|#s,count=1))
