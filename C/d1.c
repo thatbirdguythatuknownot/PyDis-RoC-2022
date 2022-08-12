@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-    const char*s="(((()))))))(("; /* input */
+    const char*s=""; /* input */
     /* Part 1 */ {
     const char*y=s;
     int x=0;
