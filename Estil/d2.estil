@@ -1,0 +1,7 @@
+s="" /; input
+/; Part 1
+c=0s.scanall("%dx%dx%d\n",|l,w,h|c+=2*(y=[l*w,w*h,h*l]).sum()+y.min())print(c)
+/; Part 2
+c=0s.scanall("%dx%dx%d\n",|l,w,h|c+=2*(y=[l,w,h]).min(2).sum()+y.prod())print(c)
+/; Both parts
+c=d=0 s.scanall("%dx%dx%d\n",|l,w,h|{c+=2*(y=[l*w,w*h,h*l]).sum()+y.min();d+=2*(y=[l,w,h]).min(2).sum()+y.prod()})print(c,d,sep='\n')
