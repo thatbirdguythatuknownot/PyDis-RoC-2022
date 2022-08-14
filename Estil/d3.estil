@@ -1,0 +1,7 @@
+s="" /; input
+/; Part 1
+x=0 print(#{x=x+1i**'>v<'.idx(c):c->s:}+1)
+/; Part 2
+print(#((f=|b,a:=0,x:=0|{0}|{x=x+1i**'>v<'.idx(c):c->s[a::b]:})(1)|f(2,1)))
+/; Both parts
+print(#(f=|b,a:=0,x:=0|{0}|{x=x+1i**'>v<'.idx(c):c->s[a::b]:})(1),#(f(1)|f(2,1)))
