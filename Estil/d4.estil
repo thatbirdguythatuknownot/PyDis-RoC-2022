@@ -1,0 +1,13 @@
+s="" /; input
+/: clarification on md5().dig() arguments:
+    0 = base 2 (binary) digest
+    1 = base 8 (octal) digest
+    2 = base 10 (decimal) digest
+    3 = base 16 (hex) digest
+   md5().dig() always returns a string :/
+/; Part 1
+print({incl hash.md5 x=0 while'0'*5==md5(s,(x+=1)).dig(3)[:5];x})
+/; Part 2
+print({incl hash.md5 x=0 while'0'*6==md5(s,(x+=1)).dig(3)[:6];x})
+/; Both parts
+f=|n|print({incl hash.md5 x=0 while'0'*n==md5(s,(x+=1)).dig(3)[:n];x})f(5)f(6)
