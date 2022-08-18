@@ -5,5 +5,6 @@ print((_=s.count)('(')-_(')'))
 print(#acc(|c|1|-(c==')'),s).til((-1).__eq))
 /: Both parts
     andif() method arguments: .andif(func_as_condition, action=print, count=-1)
-    the accumulator is passed to the callback in parameter `action` :/
+    the accumulator is passed to the callback in parameter `action`
+    Return value of callback in parameter `action` is ignored :/
 print(acc(|c|1|-(c==')'),s).andif((-1).__eq,|a|print(#a),1))
