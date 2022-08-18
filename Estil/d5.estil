@@ -1,0 +1,8 @@
+s="" /; input
+/; str.xhas: regex version of `str.has`.
+/; Part 1
+print(s.scanall("%s\n",|x|x.xhas(3,'[aeiou]','(.)%1',0,'ab|cd|pq|xy')).sum())
+/; Part 2
+print(s.scanall("%s\n",|x|x.xhas('(..).*%1','(.).%1')).sum())
+/; Both parts
+c=0print(s.scanall("%s\n",|x|{c+=x.xhas('(..).*%1','(.).%1')x.xhas(3,'[aeiou]','(.)%1',0,'ab|cd|pq|xy')}).sum(),c)
