@@ -3,5 +3,7 @@ s="" /; input
 print((_=s.count)('(')-_(')'))
 /; Part 2
 print(#acc(|c|1|-(c==')'),s).til((-1).__eq))
-/; Both parts
-print(acc(|c|1|-(c==')'),s).andif((-1).__eq,|s,_|#s,1))
+/: Both parts
+    andif() method arguments: .andif(func_as_condition, action=print, count=-1)
+    the accumulator is passed to the callback in parameter `action` :/
+print(acc(|c|1|-(c==')'),s).andif((-1).__eq,|a|print(#a),1))
