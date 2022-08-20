@@ -1,0 +1,7 @@
+s="" /; input
+/; Part 1
+m=mat(1000)s.scanall("%s %d,%d%s%d,%d\n",|x,a,b,_,c,d|(m[a:c,b:d]='l'~>x?!@:'n'~>x))print(m.sum())
+/; Part 2
+m=mat(1000)s.scanall("%s %d,%d%s%d,%d\n",|x,a,b,_,c,d|(m[a:c,b:d]+='l'~>x?2:'n'~>x?1:@>0&&-1))print(m.sum())
+/; Both parts
+n=(m=mat(1000)[:]s.scanall("%s %d,%d%s%d,%d\n",|x,a,b,_,c,d|'l'~>x?{m[a:c,b:d]=!@n[a:c,b:d]+=2}:'n'~>x?{m[a:c,b:d]=1 n[a:c,b:d]+=1}:{m[a:c,b:d]=0 n[a:c,b:d]+=@>0&&-1})print(m.sum(),n.sum())
