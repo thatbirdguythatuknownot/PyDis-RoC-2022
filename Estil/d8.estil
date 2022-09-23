@@ -1,0 +1,7 @@
+s="" # input
+# Part 1
+print(#s-eval(f'#{s}')-299)
+# Part 2
+print(600+map(s.count,'"\\').sum())
+# Both parts
+print(#s-eval(f'#{s}')-299,600+map(s.count,'"\\').sum())
